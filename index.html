@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Finqua | El CRM para el Personal Shopper Inmobiliario</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;0,700;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-error": "#ffffff",
+            "surface-bright": "#fbf9f4",
+            "error-container": "#ffdad6",
+            "secondary-container": "#fedb94",
+            "inverse-surface": "#30312e",
+            "surface-container-highest": "#e4e2dd",
+            "on-background": "#1b1c19",
+            "secondary-fixed-dim": "#e4c27d",
+            "inverse-on-surface": "#f2f1ec",
+            "surface-variant": "#e4e2dd",
+            "tertiary-container": "#58120e",
+            "surface-container-low": "#f5f3ee",
+            "tertiary-fixed": "#ffdad5",
+            "on-primary-fixed": "#1b1c1c",
+            "surface-dim": "#dbdad5",
+            "on-primary": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-fixed-dim": "#ffb4aa",
+            "primary-fixed": "#e4e2e1",
+            "outline": "#747878",
+            "on-secondary-fixed-variant": "#5a4309",
+            "background": "#fbf9f4",
+            "on-secondary-container": "#785f24",
+            "surface-container": "#f0eee9",
+            "on-primary-fixed-variant": "#474747",
+            "surface": "#fbf9f4",
+            "primary-fixed-dim": "#c8c6c5",
+            "error": "#ba1a1a",
+            "surface-tint": "#5f5e5e",
+            "on-tertiary-fixed-variant": "#7c2c25",
+            "secondary": "#745b21",
+            "primary-container": "#2c2c2c",
+            "surface-container-high": "#eae8e3",
+            "on-tertiary-fixed": "#400102",
+            "on-secondary-fixed": "#261a00",
+            "tertiary": "#3a0001",
+            "on-tertiary-container": "#dd766b",
+            "on-secondary": "#ffffff",
+            "on-surface-variant": "#444748",
+            "primary": "#171818",
+            "inverse-primary": "#c8c6c5",
+            "on-surface": "#1b1c19",
+            "on-primary-container": "#949393",
+            "on-error-container": "#93000a",
+            "secondary-fixed": "#ffdf9e",
+            "outline-variant": "#c4c7c7"
+          },
+          fontFamily: {
+            "headline": ["Newsreader", "serif"],
+            "body": ["Work Sans", "sans-serif"],
+            "label": ["Space Grotesk", "monospace"]
+          },
+          borderRadius: { "DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+
+    body {
+      font-family: 'Work Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .editorial-border {
+      border-bottom: 1px solid rgba(23, 24, 24, 0.1);
+    }
+
+    .ledger-line {
+      border-left: 1px solid rgba(23, 24, 24, 0.1);
+    }
+
+    .paper-shadow {
+      box-shadow: 0 20px 40px rgba(27, 28, 25, 0.06);
+    }
+  </style>
+</head>
+
+<body class="bg-background text-primary selection:bg-secondary-container">
+  <!-- TopNavBar -->
+  <nav
+    class="fixed top-0 w-full flex justify-between items-center px-8 py-4 backdrop-blur-md bg-[#fbf9f4] bg-opacity-90 border-b border-[#171818]/10 z-50">
+    <div class="flex items-center gap-12">
+      <span class="font-headline font-bold text-[#171818] text-2xl tracking-tight">Finqua</span>
+      <div class="hidden md:flex gap-8">
+        <a class="font-body text-[#171818]/70 hover:text-[#171818] transition-colors"
+          href="#metodologia">Metodología</a>
+        <a class="font-body text-[#171818]/70 hover:text-[#171818] transition-colors" href="#soluciones">Soluciones</a>
+        <a class="font-body text-[#171818]/70 hover:text-[#171818] transition-colors" href="#precios">Precios</a>
+      </div>
+    </div>
+    <button
+      class="bg-primary text-on-primary px-6 py-2.5 font-label text-xs uppercase tracking-widest hover:bg-secondary transition-all active:scale-95 duration-100 ease-in-out">
+      Solicitar acceso anticipado
+    </button>
+  </nav>
+  <!-- Hero Section -->
+  <header class="pt-40 pb-24 px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+      <div class="lg:col-span-8">
+        <h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tight leading-[1.05] mb-8">
+          Gestiona 5 veces más clientes. <span class="italic font-normal">Sin multiplicar el trabajo.</span>
+        </h1>
+        <p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed">
+          Transformamos a los agentes tradicionales en PSI de élite, automatizando el rastreo y los reportes para que cierren más
+          compras en menos tiempo
+        </p>
+        <p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed">
+          Finqua es el primer CRM diseñado para el Personal Shopper Inmobiliario. No es una herramienta de ventas
+          adaptada: es un sistema operativo para la representación exclusiva del comprador.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+          <button
+            class="bg-primary text-on-primary px-8 py-4 font-label text-sm uppercase tracking-[0.2em] hover:bg-secondary transition-all w-full sm:w-auto">
+            Solicitar acceso anticipado
+          </button>
+          <div class="flex items-center gap-4 py-2 px-4 bg-surface-container-low">
+            <span class="material-symbols-outlined text-secondary"
+              style="font-variation-settings: 'FILL' 1;">verified</span>
+            <span class="font-label text-xs uppercase tracking-widest text-on-secondary-container">Exclusivo para PSIs
+              en España</span>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-4 bg-surface-container-high p-8 border-l border-primary/10">
+        <div class="space-y-8">
+          <div class="editorial-border pb-6">
+            <span class="font-label text-xs uppercase tracking-widest text-secondary block mb-4">Métrica de
+              eficiencia</span>
+            <div class="flex flex-col">
+              <span class="font-headline text-5xl font-bold">29h</span>
+              <span class="font-body text-sm text-on-surface-variant italic">Ahorro semanal proyectado</span>
+            </div>
+          </div>
+          <p class="font-body text-sm leading-relaxed text-on-surface-variant italic">
+            "Un PSI con 4 encargos activos invierte ~35 horas semanales en tareas administrativas. Con Finqua, son 6."
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Problem Block -->
+  <section class="bg-surface-container-low py-24 px-8 border-y border-primary/5">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-4">
+          <span class="font-label text-xs uppercase tracking-[0.3em] text-secondary mb-6 block">El problema</span>
+          <h2 class="font-headline text-4xl font-bold leading-tight mb-6">Las herramientas que usas hoy no están
+            diseñadas para ti.</h2>
+          <p class="font-body text-lg text-on-surface-variant">Están construidas para el agente vendedor. Para el
+            volumen, no para la precisión.</p>
+        </div>
+        <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-px bg-primary/10">
+          <div class="bg-surface p-10">
+            <span class="material-symbols-outlined text-3xl mb-6">extension_off</span>
+            <h3 class="font-headline text-xl font-bold mb-3">Notion no escala</h3>
+            <p class="font-body text-sm text-on-surface-variant leading-relaxed">Tocar un campo rompe la base de datos
+              global. Sin visibilidad del trabajo del equipo. Curva de aprendizaje alta para nuevos colaboradores.</p>
+          </div>
+          <div class="bg-surface p-10">
+            <span class="material-symbols-outlined text-3xl mb-6">dynamic_feed</span>
+            <h3 class="font-headline text-xl font-bold mb-3">Flujo fragmentado</h3>
+            <p class="font-body text-sm text-on-surface-variant leading-relaxed">El ciclo encargo → cliente → pisos →
+              visitas está repartido entre Notion, Excel, Drive y WhatsApp. Sin un único punto de verdad, hay fricción
+              constante.</p>
+          </div>
+          <div class="bg-surface p-10">
+            <span class="material-symbols-outlined text-3xl mb-6">history_toggle_off</span>
+            <h3 class="font-headline text-xl font-bold mb-3">Los informes te cuestan horas</h3>
+            <p class="font-body text-sm text-on-surface-variant leading-relaxed">Invertir 3 horas en maquetar un PDF de
+              preselección es tiempo que no dedicas a buscar mejores activos.</p>
+          </div>
+          <div class="bg-surface p-10">
+            <span class="material-symbols-outlined text-3xl mb-6">visibility_off</span>
+            <h3 class="font-headline text-xl font-bold mb-3">El cliente no tiene visibilidad</h3>
+            <p class="font-body text-sm text-on-surface-variant leading-relaxed">El cliente siente incertidumbre porque
+              no puede ver tu trabajo en tiempo real. Finqua elimina esa fricción.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Solution Overview -->
+  <section class="py-24 px-8 max-w-7xl mx-auto" id="soluciones">
+    <div class="text-center mb-20">
+      <span class="font-label text-xs uppercase tracking-[0.3em] text-secondary mb-6 block">La solución</span>
+      <h2 class="font-headline text-5xl font-bold mb-6">El sistema operativo del PSI.</h2>
+      <p class="font-body text-xl text-on-surface-variant max-w-2xl mx-auto">Finqua estructura cada encargo en las
+        mismas fases que ya sigues. No impone una metodología nueva: automatiza la que ya usas.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="border border-primary/10 p-8 flex flex-col items-center text-center">
+        <div class="w-16 h-16 bg-surface-container-high flex items-center justify-center mb-8">
+          <span class="material-symbols-outlined text-primary text-3xl">account_tree</span>
+        </div>
+        <h3 class="font-headline text-2xl font-bold mb-4">Gestión de encargos</h3>
+        <p class="font-body text-sm text-on-surface-variant leading-relaxed">Pipeline completo del encargo, desde la
+          cualificación inicial hasta el postventa. Cada encargo es un proyecto trazable con historial, documentos y
+          tareas.</p>
+      </div>
+      <div class="border border-primary/10 p-8 flex flex-col items-center text-center">
+        <div class="w-16 h-16 bg-surface-container-high flex items-center justify-center mb-8">
+          <span class="material-symbols-outlined text-primary text-3xl">add_link</span>
+        </div>
+        <h3 class="font-headline text-2xl font-bold mb-4">Gestión de propiedades</h3>
+        <p class="font-body text-sm text-on-surface-variant leading-relaxed">Importa tus búsquedas de Idealista o
+          Fotocasa. Las fichas se rellenan automáticamente. El sistema sigue escaneando nuevas propiedades y
+          actualizando la información constantemente.</p>
+      </div>
+      <div class="border border-primary/10 p-8 flex flex-col items-center text-center">
+        <div class="w-16 h-16 bg-surface-container-high flex items-center justify-center mb-8">
+          <span class="material-symbols-outlined text-primary text-3xl">shield_person</span>
+        </div>
+        <h3 class="font-headline text-2xl font-bold mb-4">Portal del cliente</h3>
+        <p class="font-body text-sm text-on-surface-variant leading-relaxed">El comprador accede a su expediente en
+          tiempo real: propiedades curadas, estado del proceso, historial de visitas. Sin llamadas para dar
+          actualizaciones.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Time Savings Block (The Ledger) -->
+  <section class="bg-primary text-on-primary py-24 px-8 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <div class="lg:col-span-5">
+          <span
+            class="font-label text-xs uppercase tracking-[0.3em] text-secondary-container mb-6 block">Rentabilidad</span>
+          <h2 class="font-headline text-5xl font-bold leading-tight mb-8 text-white">Tiempo recuperado por encargo
+            activo.</h2>
+          <p class="font-body text-lg text-primary-fixed mb-12">Estas son las horas que un PSI con 4 encargos activos
+            dedica hoy a tareas que Finqua automatiza o elimina.</p>
+          <div class="p-8 bg-surface-container-lowest/10 border border-white/10">
+            <span class="font-label text-xs uppercase tracking-widest text-secondary-container block mb-2">Conclusión
+              financiera</span>
+            <p class="font-body text-xl italic leading-relaxed text-white">
+              Esas 29 horas liberadas equivalen a la capacidad de gestionar <span
+                class="text-secondary-container font-bold">2 nuevos mandatos</span> simultáneos, con un valor de 5.000€
+              - 8.000€ cada uno.
+            </p>
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left font-label">
+              <thead>
+                <tr class="border-b border-white/20 text-[10px] uppercase tracking-[0.2em] text-primary-fixed">
+                  <th class="py-4 font-medium">Actividad</th>
+                  <th class="py-4 font-medium text-right">Hoy</th>
+                  <th class="py-4 font-medium text-right">Con Finqua</th>
+                  <th class="py-4 font-medium text-right text-secondary-container">Ahorro</th>
+                </tr>
+              </thead>
+              <tbody class="text-sm">
+                <tr class="border-b border-white/5">
+                  <td class="py-6 font-body">Filtrado y registro manual</td>
+                  <td class="py-6 text-right">6h/sem</td>
+                  <td class="py-6 text-right">2h/sem</td>
+                  <td class="py-6 text-right text-secondary-container">-4h</td>
+                </tr>
+                <tr class="border-b border-white/5">
+                  <td class="py-6 font-body">Informe preselección (x4)</td>
+                  <td class="py-6 text-right">10h/sem</td>
+                  <td class="py-6 text-right">1h/sem</td>
+                  <td class="py-6 text-right text-secondary-container">-9h</td>
+                </tr>
+                <tr class="border-b border-white/5">
+                  <td class="py-6 font-body">Actualización estado cliente</td>
+                  <td class="py-6 text-right">6h/sem</td>
+                  <td class="py-6 text-right">0h/sem</td>
+                  <td class="py-6 text-right text-secondary-container">-6h</td>
+                </tr>
+                <tr class="border-b border-white/5">
+                  <td class="py-6 font-body">Registro de visitas (10 visitas)</td>
+                  <td class="py-6 text-right">4h/sem</td>
+                  <td class="py-6 text-right">1h/sem</td>
+                  <td class="py-6 text-right text-secondary-container">-3h</td>
+                </tr>
+                <tr class="border-b border-white/5">
+                  <td class="py-6 font-body">Due Diligence administrativa</td>
+                  <td class="py-6 text-right">6h/sem</td>
+                  <td class="py-6 text-right">1.5h/sem</td>
+                  <td class="py-6 text-right text-secondary-container">-4.5h</td>
+                </tr>
+                <tr class="border-b border-white/20 font-bold bg-white/5">
+                  <td class="py-6 px-4 font-headline italic">Total Semanal Estimado</td>
+                  <td class="py-6 pr-4 text-right">~35h</td>
+                  <td class="py-6 pr-4 text-right">~6h</td>
+                  <td class="py-6 pr-4 text-right text-secondary-container">~29h/sem</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- AI Features Block -->
+  <section class="py-24 px-8 max-w-7xl mx-auto">
+    <div class="mb-16">
+      <span class="font-label text-xs uppercase tracking-[0.3em] text-secondary mb-6 block">Inteligencia
+        Artificial</span>
+      <h2 class="font-headline text-5xl font-bold mb-6">Integrada en el flujo real.</h2>
+      <p class="font-body text-xl text-on-surface-variant max-w-2xl">No como módulo separado: en los puntos exactos
+        donde hoy pierdes más tiempo.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+      <div class="md:col-span-8 bg-surface-container p-12 border border-primary/5">
+        <span class="material-symbols-outlined text-3xl mb-6">photo_camera</span>
+        <h3 class="font-headline text-3xl font-bold mb-4">Screening de fotos</h3>
+        <p class="font-body text-on-surface-variant leading-relaxed max-w-xl">Analiza las imágenes de cada propiedad y
+          detecta estado de conservación, luminosidad, calidad de acabados y reformas necesarias visibles. Antes de que
+          inviertas tiempo en visitarla.</p>
+      </div>
+      <div class="md:col-span-4 bg-primary text-white p-12 flex flex-col justify-between">
+        <div>
+          <span class="material-symbols-outlined text-3xl mb-6 text-secondary-container">description</span>
+          <h3 class="font-headline text-2xl font-bold mb-4">Análisis de descripción</h3>
+        </div>
+        <p class="font-body text-sm text-primary-fixed leading-relaxed">
+          Extrae datos implícitos del texto del anuncio: orientación solar, estado de la finca, gastos de comunidad,
+          historial de reforma. Texto libre convertido en campos estructurados.
+        </p>
+      </div>
+      <div class="md:col-span-4 bg-surface-container-high p-12 border border-primary/5">
+        <span class="material-symbols-outlined text-3xl mb-6">chat</span>
+        <h3 class="font-headline text-xl font-bold mb-4">Perfil de cliente desde conversación</h3>
+        <p class="font-body text-sm text-on-surface-variant leading-relaxed">Analiza las comunicaciones con el cliente
+          para generar y actualizar automáticamente su perfil de necesidades. Identifica criterios que el cliente no ha
+          articulado explícitamente.</p>
+      </div>
+      <div class="md:col-span-4 bg-surface-container p-12 border border-primary/5">
+        <span class="material-symbols-outlined text-3xl mb-6">gavel</span>
+        <h3 class="font-headline text-xl font-bold mb-4">Análisis de nota simple</h3>
+        <p class="font-body text-sm text-on-surface-variant leading-relaxed">Lee la nota simple del Registro de la
+          Propiedad y detecta cargas, hipotecas activas, embargos y limitaciones. Resumen de riesgos en segundos.</p>
+      </div>
+      <div class="md:col-span-4 bg-surface-container-high p-12 border border-primary/5">
+        <span class="material-symbols-outlined text-3xl mb-6">engineering</span>
+        <h3 class="font-headline text-xl font-bold mb-4">Análisis de documentación técnica</h3>
+        <p class="font-body text-sm text-on-surface-variant leading-relaxed">Procesa ITE, cédula de habitabilidad y
+          estatutos de comunidad. Extrae los datos relevantes y los mapea al checklist de due diligence con alertas
+          sobre puntos críticos.</p>
+      </div>
+    </div>
+    <div class="mt-6 bg-surface-container-low p-12 border border-primary/5">
+      <span class="material-symbols-outlined text-3xl mb-6">leaderboard</span>
+      <h3 class="font-headline text-2xl font-bold mb-4">Scoring de encaje</h3>
+      <p class="font-body text-on-surface-variant leading-relaxed max-w-2xl">Calcula automáticamente el porcentaje de
+        encaje de cada propiedad con el perfil del cliente. El PSI ve de un vistazo qué propiedades vale la pena visitar
+        primero.</p>
+    </div>
+  </section>
+  <!-- Workflow Block -->
+  <section class="bg-surface py-24 px-8 border-t border-primary/10" id="metodologia">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+        <div class="max-w-xl">
+          <span class="font-label text-xs uppercase tracking-[0.3em] text-secondary mb-6 block">El proceso</span>
+          <h2 class="font-headline text-5xl font-bold mb-6 italic">El proceso PSI, digitalizado.</h2>
+          <p class="font-body text-lg text-on-surface-variant">Finqua sigue las siete fases del proceso real. Cada fase
+            tiene sus herramientas, sus checklists y sus entregables.</p>
+        </div>
+        <div class="font-label text-xs uppercase tracking-widest border border-primary/20 px-6 py-4">
+          Metodología de representación exclusiva
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-px bg-primary/10 border border-primary/10">
+        <div class="bg-white p-6 min-h-[280px] flex flex-col">
+          <span class="font-label text-xs text-secondary mb-4">01</span>
+          <h4 class="font-headline text-lg font-bold mb-3">Captación y Cualificación</h4>
+          <p class="font-body text-xs text-on-surface-variant leading-relaxed mt-auto">Formularios de onboarding,
+            cuestionarios de necesidades en dos niveles, verificación de viabilidad financiera. Botón "Activar Cliente":
+            crea el expediente completo en un clic.</p>
+        </div>
+        <div class="bg-white p-6 min-h-[280px] flex flex-col">
+          <span class="font-label text-xs text-secondary mb-4">02</span>
+          <h4 class="font-headline text-lg font-bold mb-3">Búsqueda y Selección</h4>
+          <p class="font-body text-xs text-on-surface-variant leading-relaxed mt-auto">Constante barrido de mercado automático. Screening automático con IA. Pipeline de candidatos con estados y comentarios del PSI.
+          </p>
+        </div>
+        <div class="bg-white p-6 min-h-[280px] flex flex-col">
+          <span class="font-label text-xs text-secondary mb-4">03</span>
+          <h4 class="font-headline text-lg font-bold mb-3">Due Diligence</h4>
+          <p class="font-body text-xs text-on-surface-variant leading-relaxed mt-auto">Checklist legal y técnico
+            estructurado. Análisis automático de nota simple y documentación registral. Repositorio centralizado de
+            documentación del encargo.</p>
+        </div>
+        <div class="bg-white p-6 min-h-[280px] flex flex-col">
+          <span class="font-label text-xs text-secondary mb-4">04</span>
+          <h4 class="font-headline text-lg font-bold mb-3">Negociación</h4>
+          <p class="font-body text-xs text-on-surface-variant leading-relaxed mt-auto">Estrategia de oferta y cierre de condiciones con el vendedor.
+            Registro de ofertas y
+            contraofertas. Seguimiento del proceso hasta firma de arras. Historial de decisiones trazable para el
+            cliente.</p>
+        </div>
+        <div class="bg-white p-6 min-h-[280px] flex flex-col">
+          <span class="font-label text-xs text-secondary mb-4">05</span>
+          <h4 class="font-headline text-lg font-bold mb-3">Financiación</h4>
+          <p class="font-body text-xs text-on-surface-variant leading-relaxed mt-auto">Seguimiento de hitos
+            hipotecarios: aprobación, tasación, acta notarial. Coordinación con banco y tasador registrada en el
+            expediente.</p>
+        </div>
+        <div class="bg-white p-6 min-h-[280px] flex flex-col">
+          <span class="font-label text-xs text-secondary mb-4">06</span>
+          <h4 class="font-headline text-lg font-bold mb-3">Cierre y Entrega</h4>
+          <p class="font-body text-xs text-on-surface-variant leading-relaxed mt-auto">Checklist de entrega, inventario
+            fotográfico, tramitación de cambio de suministros. Todo documentado antes de la firma de escritura.</p>
+        </div>
+        <div class="bg-white p-6 min-h-[280px] flex flex-col">
+          <span class="font-label text-xs text-secondary mb-4">07</span>
+          <h4 class="font-headline text-lg font-bold mb-3">Postventa</h4>
+          <p class="font-body text-xs text-on-surface-variant leading-relaxed mt-auto">Gestión de incidencias
+            post-firma, seguimiento de reforma si procede. El encargo no se cierra hasta que el cliente está instalado.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Comparison Table -->
+  <section class="py-24 px-8 max-w-5xl mx-auto">
+    <div class="text-center mb-16">
+      <span class="font-label text-xs uppercase tracking-[0.3em] text-secondary mb-6 block">Diseñado para el lado del
+        comprador</span>
+      <h2 class="font-headline text-4xl font-bold mb-4">Diseñado para el PSI</h2>
+      <p class="font-body text-on-surface-variant italic">Los CRMs existentes están construidos para gestionar carteras
+        de pisos en venta. Finqua está construido para gestionar encargos de compra.</p>
+    </div>
+    <div class="grid grid-cols-2 border border-primary/10">
+      <div class="p-8 bg-surface-container-low border-r border-primary/10">
+        <span
+          class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant/50 block mb-8">Herramientas
+          actuales</span>
+        <ul class="space-y-6">
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-red-800 text-sm mt-1">close</span>
+            <span class="font-body text-sm text-on-surface-variant">Diseñadas para gestionar carteras de pisos en
+              venta</span>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-red-800 text-sm mt-1">close</span>
+            <span class="font-body text-sm text-on-surface-variant">El anuncio del portal es la unidad central</span>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-red-800 text-sm mt-1">close</span>
+            <span class="font-body text-sm text-on-surface-variant">Due diligence gestionada en Excel o carpetas</span>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-red-800 text-sm mt-1">close</span>
+            <span class="font-body text-sm text-on-surface-variant">Informes manuales en PowerPoint o Word</span>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-red-800 text-sm mt-1">close</span>
+            <span class="font-body text-sm text-on-surface-variant">El cliente llama para saber lo que está
+              pasando</span>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-red-800 text-sm mt-1">close</span>
+            <span class="font-body text-sm text-on-surface-variant">Incorporar un nuevo PSI al equipo cuesta
+              semanas</span>
+          </li>
+        </ul>
+      </div>
+      <div class="p-8 bg-white shadow-2xl relative z-10 border-l border-secondary">
+        <span class="font-label text-[10px] uppercase tracking-widest text-secondary block mb-8">Finqua</span>
+        <ul class="space-y-6">
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-secondary text-sm mt-1">check</span>
+            <span class="font-body text-sm font-medium">Diseñada para gestionar encargos de compradores</span>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-secondary text-sm mt-1">check</span>
+            <span class="font-body text-sm font-medium">La búsqueda del cliente es la unidad central</span>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-secondary text-sm mt-1">check</span>
+            <span class="font-body text-sm font-medium">Checklist integrado con análisis automático de nota
+              simple</span>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-secondary text-sm mt-1">check</span>
+            <span class="font-body text-sm font-medium">Informes generados automáticamente en PDF con un clic</span>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-secondary text-sm mt-1">check</span>
+            <span class="font-body text-sm font-medium">Portal del cliente con acceso en tiempo real</span>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-secondary text-sm mt-1">check</span>
+            <span class="font-body text-sm font-medium">UI simple, onboarding de un día, metodología exportable</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- Founding Clients Block -->
+  <section class="bg-surface-container-low py-32 px-8 border-t border-primary/5" id="precios">
+    <div class="max-w-4xl mx-auto bg-white p-12 md:p-20 paper-shadow border border-primary/5">
+      <div class="text-center mb-16">
+        <span class="font-label text-xs uppercase tracking-[0.3em] text-secondary mb-6 block">Oportunidad
+          Limitada</span>
+        <h2 class="font-headline text-5xl font-bold mb-6 italic">Clientes Fundadores</h2>
+        <p class="font-body text-lg text-on-surface-variant">Finqua está en fase de desarrollo de su primer MVP
+          funcional. Un número reducido de PSIs y equipos pueden acceder antes del lanzamiento general con condiciones
+          especiales.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
+        <div>
+          <h4
+            class="font-label text-[10px] uppercase tracking-widest text-primary mb-6 border-b border-primary/10 pb-2">
+            Beneficios</h4>
+          <ul class="space-y-4 font-body text-sm">
+            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary"></span> Precio especial bloqueado</li>
+            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary"></span> 3 meses gratuitos tras lanzamiento</li>
+            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary"></span> Prioridad en peticiones de funciones</li>
+            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary"></span> Soporte directo del equipo fundador</li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="font-label text-[10px] uppercase tracking-widest text-primary mb-6 border-b border-primary/10 pb-2">
+            Condiciones</h4>
+          <p class="font-body text-sm text-on-surface-variant leading-relaxed">
+            El programa está limitado a un número reducido de PSIs activos dispuestos a dar feedback honesto. La condición es una confirmación temprana de
+            interés y participación activa en el proceso de validación del MVP.
+          </p>
+        </div>
+      </div>
+      <div class="text-center">
+        <button
+          class="bg-primary text-on-primary px-12 py-5 font-label text-sm uppercase tracking-[0.2em] hover:bg-secondary transition-all w-full md:w-auto mb-6">
+          Solicitar acceso como Cliente Fundador
+        </button>
+        <p class="font-label text-[10px] text-on-surface-variant/60 uppercase">Sin compromiso de permanencia.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-surface-container-low border-t border-[#171818]/10 pt-20 pb-12">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-12">
+      <div class="md:col-span-5">
+        <span class="font-headline font-bold text-3xl text-[#171818] block mb-6">Finqua</span>
+        <p class="font-body text-on-surface-variant italic max-w-sm mb-8">
+          Finqua — El primer CRM construido para el lado del comprador.
+        </p>
+      </div>
+      <div class="md:col-span-3">
+        <h5 class="font-label text-xs uppercase tracking-widest mb-6">Legal</h5>
+        <nav class="flex flex-col gap-4 font-body text-sm text-on-surface-variant">
+          <a class="hover:text-secondary transition-colors" href="#">Política de privacidad</a>
+          <a class="hover:text-secondary transition-colors" href="#">Aviso legal</a>
+          <a class="hover:text-secondary transition-colors" href="#">Contacto</a>
+        </nav>
+      </div>
+      <div class="md:col-span-4">
+        <h5 class="font-label text-xs uppercase tracking-widest mb-6">Contacto</h5>
+        <div class="flex flex-col gap-4 font-body text-sm text-on-surface-variant">
+          <a class="hover:text-secondary transition-colors" href="mailto:contacto@finqua.app">contacto@finqua.app</a>
+          <div class="flex gap-4 mt-4">
+            <a class="text-primary hover:text-secondary" href="#"><span
+                class="font-label text-xs uppercase tracking-widest">LinkedIn</span></a>
+            <a class="text-primary hover:text-secondary" href="#"><span
+                class="font-label text-xs uppercase tracking-widest">Twitter</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="max-w-7xl mx-auto px-8 mt-20 pt-8 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="font-label text-[10px] text-on-surface-variant/50 uppercase tracking-widest">
+        © 2026 Finqua. El sistema operativo del PSI moderno.
+      </p>
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 bg-green-500 animate-pulse"></span>
+        <span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest italic">MVP 1.0 en
+          desarrollo</span>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
