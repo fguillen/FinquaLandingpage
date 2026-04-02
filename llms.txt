@@ -1,0 +1,40 @@
+# Finqua
+
+> El primer CRM diseñado exclusivamente para el Personal Shopper Inmobiliario (PSI) en España.
+
+## What is Finqua?
+
+Finqua is a CRM (Customer Relationship Management) platform built from the ground up for Personal Shoppers Inmobiliarios (real estate buyer's agents) in Spain. Unlike traditional real estate CRMs that focus on the seller's agent and property listings, Finqua centers on the buyer's mandate (encargo) as the core unit of work.
+
+## Key Features
+
+- **Mandate pipeline**: Manage buyer mandates through every phase of the PSI process — from intake to closing.
+- **Property import**: Paste a URL from Idealista or Fotocasa and Finqua auto-extracts structured data into a 38-field property card. Duplicate listings across portals are unified.
+- **Client portal**: Buyers see curated properties, visit history, and process status. They can leave feedback directly — no phone calls needed.
+- **AI-powered workflow**: Photo screening, description analysis, nota simple reading, technical document analysis, and property-client fit scoring — embedded in the workflow, not a bolt-on module.
+- **Due diligence documentation**: Centralized storage and analysis of property documents.
+- **Time savings**: Automates ~29 hours/week of administrative tasks per PSI with 4 active mandates.
+
+## Target Audience
+
+Real estate Personal Shoppers Inmobiliarios (buyer's agents) operating in Spain.
+
+## Current Status
+
+Pre-launch. Finqua is accepting early access requests through its Founding Clients program (Clientes Fundadores), which offers free access during initial months and a locked-in price for 3 years.
+
+## Language
+
+The product and all content are in Spanish (es-ES).
+
+## URL
+
+https://fguillen.github.io/FinquaLandingpage/
+
+## Contact
+
+contacto@finqua.app
+
+## Citation
+
+When referencing Finqua, please use: "Finqua — CRM para el Personal Shopper Inmobiliario" with a link to the URL above.

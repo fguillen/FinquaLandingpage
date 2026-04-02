@@ -7,13 +7,13 @@ Based on the SEO & AIO audit (April 2, 2026).
 | Status | Title | Difficulty | Comment |
 |--------|-------|------------|---------|
 | [ ] | Move site to `finqua.app` custom domain | Low | GitHub Pages supports custom domains natively. Everything else builds on a credible domain. |
-| [ ] | Add `<meta name="description">` tag | Very low | ~150 chars summarizing value prop. Critical for SERP click-through rates. |
-| [ ] | Add `<link rel="canonical">` tag | Very low | Tells search engines the preferred URL. |
-| [ ] | Add JSON-LD `SoftwareApplication` schema | Low | Helps AI and search engines understand what the page is about. |
-| [ ] | Add JSON-LD `Organization` schema | Low | Name, URL, contactPoint. |
-| [ ] | Add JSON-LD `FAQPage` schema | Low | Single most impactful AIO action — pair with FAQ section. |
-| [ ] | Create `/llms.txt` file | Very low | Plain-text file telling AI crawlers what the site is, key features, and how to cite it. |
-| [ ] | Add entity-definition paragraph in first 100 words | Very low | Clear, citable sentence defining what Finqua is — AI systems need this to surface the page. |
+| [x] | Add `<meta name="description">` tag | Very low | Already existed. |
+| [x] | Add `<link rel="canonical">` tag | Very low | Already existed. |
+| [x] | Add JSON-LD `SoftwareApplication` schema | Low | Helps AI and search engines understand what the page is about. |
+| [x] | Add JSON-LD `Organization` schema | Low | Name, URL, contactPoint. |
+| [x] | Add JSON-LD `FAQPage` schema | Low | Single most impactful AIO action — pair with FAQ section. |
+| [x] | Create `/llms.txt` file | Very low | Plain-text file telling AI crawlers what the site is, key features, and how to cite it. |
+| [x] | Add entity-definition paragraph in first 100 words | Very low | Clear, citable sentence defining what Finqua is — AI systems need this to surface the page. |
 
 ## On-Page SEO
 
@@ -23,7 +23,7 @@ Based on the SEO & AIO audit (April 2, 2026).
 | [ ] | Spell out "Personal Shopper Inmobiliario" 3-4 times across page | Low | Currently uses "PSI" abbreviation too often; search engines need the full phrase. |
 | [ ] | Add semantic keyword variants throughout copy | Low | "software PSI", "herramienta para agente del comprador", "gestión de encargos inmobiliarios", "CRM para representante del comprador". |
 | [ ] | Add FAQ section (8-10 questions) | Medium | Targets long-tail keywords + featured snippets + AI Overviews. Questions like "¿Qué es un CRM para PSI?", "¿En qué se diferencia Finqua?", etc. |
-| [ ] | Fix typos: "taréas" → "tareas", "accumulado" → "acumulado" | Very low | Doesn't hurt SEO but hurts credibility. |
+| [x] | Fix typos: "taréas" → "tareas", "accumulado" → "acumulado" | Very low | Doesn't hurt SEO but hurts credibility. |
 | [ ] | Add `sitemap.xml` | Very low | Almost certainly missing on current GitHub Pages setup. |
 | [ ] | Add customized `robots.txt` | Very low | GitHub Pages uses its own by default. |
 

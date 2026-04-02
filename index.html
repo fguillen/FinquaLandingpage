@@ -125,6 +125,102 @@
       box-shadow: 0 20px 40px rgba(27, 28, 25, 0.06);
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Finqua",
+        "url": "https://fguillen.github.io/FinquaLandingpage/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "El primer CRM diseñado exclusivamente para el Personal Shopper Inmobiliario (PSI) en España. Automatiza el rastreo de propiedades y las tareas administrativas para que cierres más compras en menos tiempo. Transformamos a los agentes tradicionales en PSI de élite, automatizando el rastreo de propiedades y las taréas administrativas para que cierren más compras en menos tiempo.",
+        "inLanguage": "es",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "description": "Programa de Clientes Fundadores — acceso gratuito durante los primeros meses con precio especial bloqueado 3 años",
+          "availability": "https://schema.org/PreOrder"
+        }
+      },
+      {
+        "@type": "Organization",
+        "name": "Finqua",
+        "url": "https://fguillen.github.io/FinquaLandingpage/",
+        "logo": "https://fguillen.github.io/FinquaLandingpage/logo_small.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "contacto@finqua.app",
+          "contactType": "customer support",
+          "availableLanguage": "Spanish"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Finqua es un CRM inmobiliario más?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Los CRMs inmobiliarios existentes están diseñados para el agente vendedor: gestionan carteras de pisos en venta. Finqua es el primer CRM construido desde cero para el flujo de trabajo del PSI, donde la unidad central es el encargo del comprador, no el anuncio del portal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué pasa con las herramientas que ya uso?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Finqua sustituye la combinación de Notion, Excel, carpetas de Drive y WhatsApp que usas hoy para gestionar tus encargos. Todo queda en un único sistema: pipeline de encargos, fichas de propiedades, documentación de due diligence, comunicación con el cliente y reporting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cómo funciona la importación de propiedades?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pegas la URL de un anuncio de Idealista o Fotocasa y Finqua extrae y normaliza los datos automáticamente en una ficha estructurada con 38 campos en 8 categorías. Si el mismo inmueble aparece en varios portales, el sistema lo unifica en una sola ficha."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué puede ver mi cliente en el portal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Las propiedades curadas con estado, fotos e informes del PSI; el historial de visitas realizadas; y la etapa actual del proceso. El cliente puede dejar comentarios sobre cada propiedad directamente, sin necesidad de llamarte para dar feedback."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿La inteligencia artificial es un módulo aparte?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Las capacidades de IA están integradas directamente en el flujo de trabajo: screening de fotos, análisis de descripción, lectura automática de nota simple, análisis de documentación técnica y scoring de encaje propiedad-cliente. Se activan en los puntos donde hoy pierdes más tiempo."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuánto tiempo necesito para empezar a usarlo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "El onboarding se reduce a un día. La interfaz es simple y sigue las mismas fases que ya usas en tu proceso real. Incorporar un nuevo colaborador al equipo es igual de rápido: la metodología es exportable."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué condiciones tiene el programa de Clientes Fundadores?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Acceso gratuito durante los primeros meses, precio especial bloqueado durante 3 años, influencia directa en el diseño de funcionalidades y soporte directo del equipo fundador. La única condición es una confirmación temprana de interés y participación activa en la validación del MVP."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body class="bg-background text-primary selection:bg-secondary-container">
@@ -153,9 +249,12 @@
           El trabajo administrativo te distrae de lo que de verdad importa:
           <span class="italic font-normal">encontrar el piso ideal para tu cliente.</span>
         </h1>
+        <p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-3xl mb-4 leading-relaxed">
+          Finqua es el primer CRM diseñado exclusivamente para el Personal Shopper Inmobiliario (PSI) en España. Automatiza el rastreo de propiedades y las tareas administrativas para que cierres más compras en menos tiempo.
+        </p>
         <p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-3xl mb-12 leading-relaxed">
-          Transformamos a los agentes tradicionales en PSI de élite, automatizando el rastreo de propiedades y las taréas administrativas para que cierren más
-          compras en menos tiempo.
+          Transformamos a los agentes tradicionales en PSI de élite, automatizando el rastreo de propiedades y las taréas
+          administrativas para que cierren más compras en menos tiempo.
         </p>
         <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
           <button
@@ -277,14 +376,14 @@
         <div class="lg:col-span-5">
           <span
             class="font-label text-xs uppercase tracking-[0.3em] text-secondary-container mb-6 block">Rentabilidad</span>
-          <h2 class="font-headline text-5xl font-bold leading-tight mb-8 text-white">Tiempo recuperado accumulado.</h2>
+          <h2 class="font-headline text-5xl font-bold leading-tight mb-8 text-white">Tiempo recuperado acumulado.</h2>
           <p class="font-body text-lg text-primary-fixed mb-12">Estas son las horas que un PSI con 4 encargos activos
             dedica hoy a tareas que Finqua automatiza o elimina.</p>
           <div class="p-8 bg-surface-container-lowest/10 border border-white/10">
             <span class="font-label text-xs uppercase tracking-widest text-secondary-container block mb-2">Conclusión
               financiera</span>
             <p class="font-body text-xl italic leading-relaxed text-white">
-              Esas 29 horas liberadas puedes usarlas para las taréas que más te necesitan como
+              Esas 29 horas liberadas puedes usarlas para las tareas que más te necesitan como
               <span class="text-secondary-container font-bold">captar más clientes</span> o
                 simplemente <span class="text-secondary-container font-bold">pasar más tiempo con tu familia</span>.
                 Si valoras tu hora en 150€, eso son más de
