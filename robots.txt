@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fguillen.github.io/FinquaLandingpage/sitemap.xml

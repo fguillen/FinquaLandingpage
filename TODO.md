@@ -20,12 +20,12 @@ Based on the SEO & AIO audit (April 2, 2026).
 | Status | Title | Difficulty | Comment |
 |--------|-------|------------|---------|
 | [ ] | Rewrite H1 to include primary keyword | Low | Current H1 has no target keywords. Should contain "CRM" + "Personal Shopper Inmobiliario". |
-| [ ] | Spell out "Personal Shopper Inmobiliario" 3-4 times across page | Low | Currently uses "PSI" abbreviation too often; search engines need the full phrase. |
+| [x] | Spell out "Personal Shopper Inmobiliario" 3-4 times across page | Low | Currently uses "PSI" abbreviation too often; search engines need the full phrase. |
 | [ ] | Add semantic keyword variants throughout copy | Low | "software PSI", "herramienta para agente del comprador", "gestión de encargos inmobiliarios", "CRM para representante del comprador". |
-| [ ] | Add FAQ section (8-10 questions) | Medium | Targets long-tail keywords + featured snippets + AI Overviews. Questions like "¿Qué es un CRM para PSI?", "¿En qué se diferencia Finqua?", etc. |
+| [x] | Add FAQ section (8-10 questions) | Medium | Targets long-tail keywords + featured snippets + AI Overviews. Questions like "¿Qué es un CRM para PSI?", "¿En qué se diferencia Finqua?", etc. |
 | [x] | Fix typos: "taréas" → "tareas", "accumulado" → "acumulado" | Very low | Doesn't hurt SEO but hurts credibility. |
-| [ ] | Add `sitemap.xml` | Very low | Almost certainly missing on current GitHub Pages setup. |
-| [ ] | Add customized `robots.txt` | Very low | GitHub Pages uses its own by default. |
+| [x] | Add `sitemap.xml` | Very low | Almost certainly missing on current GitHub Pages setup. |
+| [x] | Add customized `robots.txt` | Very low | GitHub Pages uses its own by default. |
 
 ## Trust & Credibility
 
